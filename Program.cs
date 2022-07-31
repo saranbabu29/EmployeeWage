@@ -1,36 +1,30 @@
 ﻿using System;
 
-namespace uc3
+namespace ConsoleApp1
 {
     class Program
     {
-        public const int is_Full_Time = 0;
-        public const int is_Part_Time = 1;
-        public const int per_hour_Wage = 20;
-
         static void Main(string[] args)
         {
+            int is_Full_Time = 0;
             int emphr;
+            int wage = 20;
+            int dailyWage;
+            int days = 20;
             Random random = new Random();
             int value = random.Next(0, 2);
-
-            switch (value)
+            if (value == is_Full_Time)
             {
-                case is_Full_Time:
-                    emphr = 8;
-                    Console.WriteLine("The FullTime Emp Wage is =" + (per_hour_Wage * emphr));
-                    break;
-                case is_Part_Time:
-                    emphr = 4;
-                    Console.WriteLine("The PartTime Emp Wage is =" + (per_hour_Wage * emphr));
-                    break;
-                default:
-                    emphr = 0;
-                    break;
-
+                emphr = 8;
+                dailyWage = (emphr * wage);
+                Console.WriteLine("The Full_time Employee salary is " + (days * dailyWage));
             }
-
+            else
+            {
+                emphr = 4;
+                dailyWage = (emphr * wage);
+                Console.WriteLine("The Part_time Employee salary is " + (days * dailyWage));
+            }
         }
-
     }
 }
