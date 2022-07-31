@@ -6,16 +6,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int emp_present = 0;
+            int Employee_wage = 0;
+            int emphr;
+            int wage = 20;
+            int dailyWage;
+            int days = 20;
             Random random = new Random();
-            int value = random.Next(0, 1);
-            if (value == emp_present)
+            int value = random.Next(0, 2);
+            if (value == Employee_wage)
             {
-                Console.WriteLine("Employee is present");
+                emphr = 100;
+                Console.WriteLine("The Employee Wage for 100hrs is " + (emphr * wage));
             }
             else
             {
-                Console.WriteLine("Employee is absent");
+                emphr = 8;
+                days = 20;
+                dailyWage = (emphr * wage);
+                Console.WriteLine("The Employee Wage for 20days is " + (days * dailyWage));
             }
         }
     }
