@@ -1,22 +1,32 @@
 ﻿using System;
 
-namespace ConsoleApp1
+namespace uc3
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
-            int emp_present = 0;
+            int is_Full_Time = 1;
+            int wage = 20;
+            int emphr;
             Random random = new Random();
-            int value = random.Next(0, 1);
-            if (value == emp_present)
+            int value = random.Next(0, 2);
+
+            if (value == is_Full_Time)
             {
-                Console.WriteLine("Employee is present");
+                emphr = 8;
+                Console.WriteLine("The Employee is Fulltime and Wage is =" + (wage * emphr));
             }
             else
             {
-                Console.WriteLine("Employee is absent");
+                emphr = 4;
+                Console.WriteLine("The Employee is parttime and Wage is =" + (wage * emphr));
             }
         }
+
     }
+
 }
+
